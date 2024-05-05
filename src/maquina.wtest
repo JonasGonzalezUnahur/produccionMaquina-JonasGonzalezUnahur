@@ -1,0 +1,27 @@
+import registroProduccion.*
+
+describe "group of tests" {
+	test "algun dia se produjo 49" {
+		assert.that(registroProduccion.algunDiaSeProdujo(49))
+	}
+	test "produccion maxima"{
+		assert.equals(62, registroProduccion.maximoValorDeProduccion())
+	}
+	test "valores pares"{
+		// funciona como tiene que funcionar, pero se como hacer el test que dan
+		// mas de un numero
+		assert.equals((18,62,2) registroProduccion.valoresDeProduccionPares())
+	}
+	test "produccion este entre 10 y 100"{
+		assert.that(registroProduccion.produccionEsAcotada(10,100))
+	}
+	test "suma de todo lo producido"{
+		assert.equals(244, registroProduccion.totalProducido())
+	}
+	test "ultima produccion"{
+		assert.equals(39, registroProduccion.ultimoValorDeProduccion())
+	}
+	test "cantidad de producciones mayores a la primera"{
+		assert.equals(2,registroProduccion.cantidadProduccionesMayorALaPrimera() )
+	}
+}
